@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab6.controller.HomePageController">
+   <children>
+      <Label layoutX="237.0" layoutY="25.0" text="Home">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutButton" layoutX="26.0" layoutY="23.0" mnemonicParsing="false" onAction="#logoutButtonClicked" text="Logout" />
+      <Label layoutX="25.0" layoutY="79.0" text="Friends">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="removeFriendButton" layoutX="337.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleRemoveFriend" prefHeight="25.0" prefWidth="97.0" text="Remove friend" AnchorPane.rightAnchor="36.0" />
+      <Button fx:id="addNewFriendButton" layoutX="421.0" layoutY="157.0" mnemonicParsing="false" onAction="#addNewFriendButtonClicked" text="Add new friend" AnchorPane.rightAnchor="35.66666666666663" />
+      <TableView fx:id="friendsList" layoutX="26.0" layoutY="104.0" prefHeight="237.0" prefWidth="298.0" AnchorPane.bottomAnchor="24.666666666666657" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="146.0" AnchorPane.topAnchor="104.0">
+        <columns>
+          <TableColumn fx:id="firstNameColumn" prefWidth="109.9999942779541" text="FirstName" />
+          <TableColumn fx:id="lastNameColumn" prefWidth="116.0" text="LastName" />
+            <TableColumn fx:id="emailColumn" prefWidth="154.00001525878906" text="Email" />
+        </columns>
+      </TableView>
+      <Button fx:id="friendRequestsButton" layoutX="421.0" layoutY="208.0" mnemonicParsing="false" onAction="#friendRequestsButtonClicked" text="Friend requests" />
+      <Button fx:id="sentRequestButton" layoutX="421.0" layoutY="260.0" mnemonicParsing="false" onAction="#sentRequestButtonClicked" prefHeight="25.0" prefWidth="97.0" text="Sent requests" />
+      <Button fx:id="sendMessageButton" layoutX="421.0" layoutY="311.0" mnemonicParsing="false" onAction="#sendMessageButtonClicked" prefHeight="25.0" prefWidth="97.0" text="Send message" />
+      <Button fx:id="newLoginButton" layoutX="421.0" layoutY="360.0" mnemonicParsing="false" onAction="#newLoginButtonClicked" prefHeight="25.0" prefWidth="97.0" text="New user login" />
+   </children>
+</AnchorPane>
